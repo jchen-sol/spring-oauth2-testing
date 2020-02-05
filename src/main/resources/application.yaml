@@ -1,0 +1,24 @@
+#security:
+#  oauth2:
+#    client:
+#      registration:
+#        google:
+#          clientId: 102652846532-fumviqa3mh60hbfu4o6eetuc8bddo5as.apps.googleusercontent.com
+#          clientSecret: Rm0IOeN0KfCvqCthwUTCnXHV
+
+spring:
+  security:
+    oauth2:
+      client:
+#        provider:
+#          google:
+#            token-uri: https://accounts.google.com/o/oauth2/token
+        registration:
+          google:
+            #client-id:
+            #client-secret:
+            redirect-uri: http://localhost:8080/receive-code
+            client-authentication-method: post
+            authorization-grant-type: authorization_code
+            scope: https://www.googleapis.com/auth/spreadsheets
+
